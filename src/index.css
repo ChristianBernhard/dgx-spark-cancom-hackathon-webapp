@@ -3,9 +3,10 @@
 @tailwind utilities;
 
 :root {
-  --primary-color: #76B900;
-  --primary-color-dark: #5a8f00;
-  --primary-color-glow: rgba(118, 185, 0, 0.25);
+  --primary-color: #ff0035;
+  --primary-color-light: #ff4d6d;
+  --primary-color-dark: #cc002a;
+  --primary-color-glow: rgba(255, 0, 53, 0.25);
 }
 
 * {
@@ -30,7 +31,7 @@ body {
 .bg-ambient {
   background: 
     radial-gradient(ellipse 80% 50% at 50% -20%, var(--primary-color-glow), transparent),
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(118, 185, 0, 0.08), transparent),
+    radial-gradient(ellipse 60% 40% at 100% 100%, var(--primary-color-glow), transparent),
     linear-gradient(180deg, #0a0a0b 0%, #050506 100%);
 }
 
@@ -117,7 +118,7 @@ body {
 
 /* Gradient text */
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary-color) 0%, #a3e635 100%);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-color-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

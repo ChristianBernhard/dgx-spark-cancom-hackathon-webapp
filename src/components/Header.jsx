@@ -13,7 +13,7 @@ export default function Header({ onClear, messageCount }) {
         {/* Logo and Title */}
         <div className="flex items-center gap-4">
           {/* Logo icon */}
-          <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-spark-primary to-lime-400 flex items-center justify-center shadow-glow-sm">
+          <div className="w-11 h-11 rounded-xl flex items-center justify-center shadow-glow-sm" style={{ background: 'linear-gradient(to bottom right, var(--primary-color), var(--primary-color-light))' }}>
             <svg className="w-6 h-6 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
             </svg>
@@ -25,7 +25,7 @@ export default function Header({ onClear, messageCount }) {
               <span className="gradient-text">{APP_TITLE}</span>
             </h1>
             <div className="flex items-center gap-2 mt-0.5">
-              <span className="text-xs text-zinc-500">Powered by</span>
+              <span className="text-xs text-zinc-500">Attended by</span>
               <span className="text-xs font-medium text-zinc-400">{COMPANY_NAME}</span>
             </div>
           </div>
@@ -33,13 +33,6 @@ export default function Header({ onClear, messageCount }) {
 
         {/* Actions */}
         <div className="flex items-center gap-3">
-          {/* Message count badge */}
-          {messageCount > 0 && (
-            <div className="px-3 py-1 rounded-full bg-spark-gray border border-spark-gray-light text-xs text-zinc-400 font-mono">
-              {messageCount} messages
-            </div>
-          )}
-          
           {/* Clear button */}
           {messageCount > 0 && (
             <button
@@ -56,7 +49,7 @@ export default function Header({ onClear, messageCount }) {
 
           {/* GitHub link placeholder */}
           <a
-            href="https://github.com"
+            href="https://github.com/ChristianBernhard/dgx-spark-cancom-hackathon-webapp"
             target="_blank"
             rel="noopener noreferrer"
             className="p-2 rounded-lg bg-spark-gray hover:bg-spark-gray-light border border-spark-gray-light hover:border-spark-gray-lighter text-zinc-400 hover:text-white transition-all duration-200"
