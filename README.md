@@ -6,17 +6,21 @@ A minimal chatbot for the **DGX Spark Hackathon** by **Cancom**.
 
 ## 🚀 Quick Start
 
-### 1. Configure your Spark connection
+### 1. Serve your model on the Spark
+
+👉 https://build.nvidia.com/spark/nim-llm/instructions
+
+### 2. Configure your Spark connection
 
 Edit `src/api/chat.js` (lines 9-11):
 
 ```js
-const DGX_IP = "172.16.80.193"   // Your Spark IP
-const DGX_PORT = 8000
-const MODEL_NAME = "nvidia/nemotron-nano-9b-v2"
+const DGX_IP = "172.16.80.104"   // Run on Spark: hostname -I | awk '{print $1}'
+const DGX_PORT = 8000            // Default Spark port
+const MODEL_NAME = "meta/llama-3.1-8b-instruct"  // Change accordingly
 ```
 
-### 2. Install & run
+### 3. Install & run
 
 ```bash
 npm install

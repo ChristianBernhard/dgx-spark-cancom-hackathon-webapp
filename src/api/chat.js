@@ -6,9 +6,9 @@
 // ============================================
 // CONFIGURE YOUR DGX SPARK CONNECTION HERE
 // ============================================
-const DGX_IP = "172.16.80.104"
-const DGX_PORT = 8000
-const MODEL_NAME = "meta/llama-3.1-8b-instruct"
+const DGX_IP = "172.16.80.104"       // Run on Spark: hostname -I | awk '{print $1}'
+const DGX_PORT = 8000                 // Default Spark port
+const MODEL_NAME = "meta/llama-3.1-8b-instruct"  // Change accordingly
 // ============================================
 
 const CHAT_ENDPOINT = `http://${DGX_IP}:${DGX_PORT}/v1/chat/completions`
